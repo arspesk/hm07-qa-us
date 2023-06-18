@@ -22,9 +22,9 @@ test('Response body should return "true"', async () => {
 		const response = await fetch(`${config.API_URL}/api/v1/kits/1`, {
 			method: 'DELETE',
 		});
-		responseBody = await response.json;
+		responseBody = await response.json();
 	} catch (error) {
 		console.error(error);
 	}
-	expect(Boolean(responseBody)).toBe(true);
+	expect(responseBody['ok']).toBe(Boolean(true));
 });

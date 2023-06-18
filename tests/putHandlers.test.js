@@ -32,9 +32,9 @@ test('Response Body should return "true"', async () => {
 			},
 			body: JSON.stringify(requestBody)
 		});
-		responseBody = await response.json;
+		responseBody = await response.json();
 	} catch (error) {
 		console.error(error);
 	}
-	expect(Boolean(responseBody)).toBe(true);
+	expect(responseBody['ok']).toBe(Boolean(true));
 });
